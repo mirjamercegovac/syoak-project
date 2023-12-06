@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.home-container{
+    display: grid;
+    gap: 24px;
+        
+        .title{
+            font-size: $title-big-size;
+            font-weight: $extra-bold-black;
+            color: $black;
+            line-height: 76px;
+            letter-spacing: 0em;
+            text-align: left;
+            width: 1031px;
+        }
+        
+        .text{
+            width: 541px;
+            font-size: $txt-big-size;
+            font-weight: $regular;
+            color: $main-text-color;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    
+}

@@ -7,8 +7,9 @@
     justify-content: space-between;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    padding: 1rem 1.5rem;
-    width: 100%;
+    padding: 32px 55px;
+    max-width: 1440px;
+    
     img{
         width: 100px;
         height: 25.13px;
@@ -17,55 +18,68 @@
         
     }
 
-    .navbar{
-        display: flex;
-        gap: 44px;
-        left: -280px;
-        position: absolute;
-        &::before{
+
+    .vertical-line{
+
+        &::after{
             content: '';
-            width: 500px;
-            left: 210px;
-            position: relative;
-            height: 1px;
-            display: block;
-            background-color: black;
-            transform: rotate(90deg);
-            background: #E1E1E1;
-
-        }
-
-
-        a{
-            font-size: $txt-small-size;
-            font-weight: $bold;
-            color: $dark-grey;
-        }
+            position: absolute;
+            top: 0;
+            left: 210px; 
+            width: 1px; 
+            height: 5352px;
+            background-color: #E1E1E1; 
+            transform: translateX(-50%);
+          }
     }
-    .buttons{
-        color: $dark-grey;
+    
+    .nav{
+        left: 280px;
+        position: absolute;
         display: flex;
-        gap: 44px;
-
-        .button-text{
-            font-size: $txt-small-size;
-            font-weight: $medium;
-            margin: auto;
+        justify-content: space-between;
+        width: 1105px;
+       
+        .navbar{
             display: flex;
-            gap: 8px;
-            cursor: pointer;
-            img{
-                width: 19px;
-                height: 19px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 44px;
+            a{
+                font-size: $txt-small-size;
+                font-weight: $bold;
+                color: $dark-grey;
             }
         }
-        .button{
-            font-size: $txt-btn-size;
-            border: 1.5px solid $btn-color;
-            font-weight: $medium;
-            cursor: pointer;
-            border-radius: 5px;
-            padding: 8px 24px;
+        
+        
+        .right{
+            color: $dark-grey;
+            display: flex;
+            gap: 44px;
+            justify-content: space-between;
+    
+            .button-text{
+                font-size: $txt-small-size;
+                font-weight: $medium;
+                margin: auto;
+                display: flex;
+                gap: 8px;
+                cursor: pointer;
+                img{
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+            .button{
+                font-size: $txt-btn-size;
+                border: 1.5px solid $btn-color;
+                font-weight: $medium;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 8px 24px;
+            }
         }
     }
+    
 }

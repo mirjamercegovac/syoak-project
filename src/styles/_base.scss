@@ -1,7 +1,32 @@
 @import "./variables";
 @import "./reset";
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     font-family: $font-family-base;
     background-color: $background-color;
+}
+
+.section{
+    padding: 10rem 5rem 10rem 17.4rem;
+}
+
+.button-base{
+    font-size: $txt-btn-size;
+    font-weight: $medium;
+    cursor: pointer;
+    background: $btn-color;
+    width: 145px;
+    height: 45px;
+    text-align: center;
+    letter-spacing: 0em;
+    a{
+        line-height: 17px;
+        color: $white;
+        position: relative;
+        top: 2px;
+    }
 }
