@@ -9,7 +9,7 @@ import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 const Header = () => {
   return (
     <header className="header">
-      <img src={logo}/>
+      <img src={logo} alt="logo" />
       <div className="vertical-line"></div>
 
       <div className="nav">
@@ -22,7 +22,7 @@ const Header = () => {
           
         <div className="right">
           <a className="button-text">
-            <img src={icon}/> Log in 
+            <img src={icon} alt=""/> Log in 
           </a>
           <a className="button-text">
             <FontAwesomeIcon icon={faPaperPlane} style={{ color:  '#0052B4', width: '19px', height: '18.43px' }} /> Contact us

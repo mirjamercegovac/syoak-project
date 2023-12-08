@@ -1,1 +1,122 @@
 @import '../../styles/variables';
+
+.footer{
+    
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        gap: 2rem;
+
+        .line{
+            border-top: 1px solid $light-grey-second;
+            position: absolute;
+            left: 210px;
+            width: 100%;
+            margin-top: -4rem;
+        }
+
+        .box-left{
+            display: grid;
+            gap: 25px;
+            width: 317px;
+            .info{
+                display: grid;
+                gap: 16px;
+                img{
+                    width: 150px;
+                    height: 37.7px;
+                }
+                p{
+                    font-size: $txt-small-size;
+                    font-weight: $regular;
+                    line-height: 20px;
+                    color: $dark-grey-second;
+                }
+            }
+
+
+            .links{
+                display: grid;
+                gap: 12px;
+                .icon-font{
+                    width: 12.8px; 
+                    height: 16.36px;
+                    color: $btn-color;
+                }
+                .icon-mui{
+                    width:12.8px;
+                    height:12.8px;
+                    color: $btn-color;
+                }
+                a{
+                    font-weight: $regular;
+                    line-height: 20px;
+                    font-size: $txt-small-size;
+                    color: $main-title-color;
+                }
+            }
+        }
+
+        .box-right{
+            display: flex;
+            gap: 64px;
+            justify-content: space-between;
+            .link{
+                h3{
+                    font-weight: $bold;
+                    font-size: $txt-medium-size;
+                    line-height: 24px;
+                    color: $dark-grey-second;
+                    margin-bottom: 12px;
+                }
+                .links{
+                    display: grid;
+                    gap: 8px;
+                    a{
+                        font-size: 12.8px;
+                        color: $btn-color;
+                        line-height: 22.41px;
+                        font-weight: $regular;
+                        display: block;
+                    }
+                }
+
+                
+                
+            }
+
+        }
+    }
+
+    
+
+    
+
+
+
+    .credit{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        gap: 2rem;
+        margin-top: 5rem;
+        .line{
+            border-top: 1px solid $light-grey-second;
+            position: absolute;
+            left: 210px;
+            width: 100%;
+            margin-top: -1rem;
+        }
+        .left, .right{
+            display: flex;
+            font-size: $txt-small-size;
+            font-weight: $regular;
+            line-height: 20px;
+            color: $light-grey;
+        }
+
+        .right{
+            justify-content: space-between;
+        }
+    }
+}

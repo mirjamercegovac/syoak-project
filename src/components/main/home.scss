@@ -1,27 +1,119 @@
 @import '../../styles/variables';
 
-.home-container{
-    display: grid;
-    gap: 24px;
-        
-        .title{
-            font-size: $title-big-size;
-            font-weight: $extra-bold-black;
-            color: $black;
-            line-height: 76px;
-            letter-spacing: 0em;
-            text-align: left;
-            width: 1031px;
-        }
-        
-        .text{
-            width: 541px;
-            font-size: $txt-big-size;
-            font-weight: $regular;
-            color: $main-text-color;
-            line-height: 35px;
-            letter-spacing: 0em;
-            text-align: left;
-        }
+
+.home{
     
+    
+    .home-container{
+        display: grid;
+        gap: 24px;
+        
+            
+            .title{
+                font-size: $title-big-size;
+                font-weight: $extra-bold-black;
+                color: $black;
+                line-height: 76px;
+                letter-spacing: 0em;
+                text-align: left;
+                // width: 1031px;
+                max-width: 100%;
+            }
+            
+            .text{
+                // max-width: 100%;
+                width: 541px;
+                font-size: $txt-big-size;
+                font-weight: $regular;
+                color: $main-text-color;
+                line-height: 35px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        
+    }
+    
+}
+
+
+
+
+.horizontal-line{
+
+    .vertical-arrow{
+        position: absolute;
+        left: 99px;
+        top: 671px;
+    }
+   
+   
+
+   .progress-bar {
+    display: flex;
+    align-items: center;
+    margin: -5rem 1.4rem 0 1.4rem;
+  
+
+
+        .circle {
+            width: 13.33px;
+            height: 13.33px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .outer-circle {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: $white; // Boja vanjskog kruga
+            border-radius: 50%;
+            border: 1px solid $btn-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .inner-circle {
+                width: 13.33px;
+                height: 13.33px;
+                background-color: $btn-color; // Boja unutrašnjeg kruga
+                border-radius: 50%;
+            }
+        }
+
+        .outer-circle-orange {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background-color: $white; 
+            border-radius: 50%;
+            border: 1px solid $orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .inner-circle-orange {
+                width: 23.33px;
+                height: 23.33px;
+                background-color: $orange; 
+                border-radius: 50%;
+            }
+            p{
+                margin-top: 40px;
+                font-weight: $medium;
+                font-size: $txt-medium-size;
+                color: $orange;
+                display: flex;
+                justify-content: center;
+            }
+        }
+  
+        .line {
+            flex: 1;
+            height: 1px;
+            margin: 0 6px;
+            border: 1px dashed $light-grey-third;
+        }
+  }
+  
+  
 }

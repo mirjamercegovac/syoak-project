@@ -22,6 +22,8 @@ const Home = () => {
             </div>
         </section>
 
+        
+
     );
 
 };
