@@ -3,7 +3,7 @@ import './home.scss';
 import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
 import arrow from '../../images/Arrow.svg';
 
-const Vertical = () => {
+const Horizontal = () => {
     return (
         <section className="horizontal-line section">
             <img src={arrow} className="vertical-arrow" alt=""></img>
@@ -34,4 +34,4 @@ const Vertical = () => {
 
 };
 
-export default Vertical;
+export default Horizontal;

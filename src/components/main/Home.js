@@ -5,7 +5,7 @@ import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
 const Home = () => {
     return (
         <section className="home section" id="home">
-            <div className="home-container container">
+            <div className="home-container">
 
                 <h1 className="title">
                     Our bussines takes the industry of oil & gass to a new level.

@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+
+.about-container{
+    display: grid;
+    width: 60%;
+    gap: 40px;
+    margin-bottom: 4rem;
+
+    .title{
+        font-size: $title-medium-size;
+        font-weight: $bold;
+        line-height: 56px;
+        color: $main-title-color;
+    }
+
+    .text{
+        font-size: $txt-big-size;
+        font-weight: $regular;
+        line-height: 28px;
+        color: $main-text-color;
+    }
+}
+
+.box-container{
+
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        min-height: 60vh;
+        margin: 1rem 0;
+        justify-content: space-between;
+
+        &:nth-child(even){
+            flex-flow: row-reverse wrap;
+        }
+
+        .image{
+            flex: 0 0 300px;
+
+            img{
+                width: 300px;
+            }
+        }
+
+        &:nth-child(odd) .image {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+
+        .content{
+            flex: 0 0 426px;
+            gap: 16px;
+            display: grid;
+
+            .title{
+                font-size: $title-small-size;
+                font-weight: $bold;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-title-color;
+            }
+
+            .paragraph{
+                font-size: $txt-medium-size;
+                font-weight: $regular;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-text-color;
+            }
+
+            .paragraph-mid{
+                font-size: $txt-small-size;
+                font-weight: $regular;
+                line-height: 20px;
+                letter-spacing: 0em;
+                color: $main-text-color;
+            }
+        }
+
+    }
+}

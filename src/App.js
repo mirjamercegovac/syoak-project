@@ -2,7 +2,8 @@ import React from "react";
 import './styles/index.scss';
 import Header from './components/header/Header';
 import Home from './components/main/Home';
-import Vertical from './components/main/Vertical';
+import Horizontal from './components/main/Horizontal';
+import About from './components/main/About';
 import Footer from './components/footer/Footer';
 
 
@@ -11,7 +12,8 @@ function App() {
     <>
       <Header />
       <Home />
-      <Vertical />
+      <Horizontal />
+      <About />
       <Footer />
      
     </>
