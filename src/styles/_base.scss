@@ -23,6 +23,9 @@ body{
     height: 45px;
     text-align: center;
     letter-spacing: 0em;
+    outline: none;
+    border: none;
+    color: $white;
     a{
         line-height: 17px;
         color: $white;
