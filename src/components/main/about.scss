@@ -8,7 +8,7 @@
 
     .title{
         font-size: $title-medium-size;
-        font-weight: $bold;
+        font-weight: $extra-bold-black;
         line-height: 56px;
         color: $main-title-color;
     }
@@ -28,7 +28,7 @@
         flex-wrap: wrap;
         gap: 2rem;
         align-items: center;
-        min-height: 60vh;
+        min-height: 50vh;
         margin: 1rem 0;
         justify-content: space-between;
 

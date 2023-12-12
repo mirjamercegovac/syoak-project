@@ -6,7 +6,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 const Contact = () => {
   return (
     <section className="contact section" id="contact">
-            <h2 className="title">Get in Touch With Us</h2>
+            <h2 className="title">Get in Touch <br /> With Us</h2>
 
             <div className="contact-container">
                 

@@ -5,10 +5,10 @@
 
     .title{
         font-size: $title-medium-size;
-        font-weight: $bold;
+        font-weight: $extra-bold-black;
         line-height: 56px;
         color: $main-title-color;
-        max-width: 45%;
+        margin-bottom: 1rem;
     }
 
     .contact-container{

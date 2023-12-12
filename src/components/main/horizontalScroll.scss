@@ -1,0 +1,137 @@
+@import '../../styles/variables';
+
+.horizontal-scroll{
+    padding: 5rem 0rem 5rem 13.2rem;
+
+    .horizontal-scroll-container{
+      background-color: $white;
+      padding-left: 4.3rem;
+    
+      .motion-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+
+      .page{
+        position: relative;
+        top: 238px;
+        min-width: 100%;
+
+        .main-title{
+          font-size: $title-medium-size;
+          font-weight: $extra-bold-black;
+          line-height: 56px;
+          color: $main-title-color;
+          margin-bottom: 2rem;
+        }
+        .info{
+          flex-wrap: wrap;
+          width: 70%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        
+          .image{
+
+            img{
+                width: 100%;
+            }
+          }
+
+          .content{
+            flex: 0 0 426px;
+            gap: 16px;
+            display: grid;
+
+            .title{
+                font-size: $title-small-size;
+                font-weight: $bold;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-title-color;
+            }
+
+            .paragraph{
+                font-size: $txt-medium-size;
+                font-weight: $regular;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-text-color;
+            }
+          }
+
+        }
+
+      }}
+
+
+      
+    }
+
+
+    .progress{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+
+      .progress-bar {
+        top: 177px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+  
+        .left-icon{
+          height: 32px;
+          width: 32px;
+          color: $btn-color;
+          position: relative;
+          top: 38px;
+          right: 32px;
+        }
+        .right-icon{
+          height: 32px;
+          width: 32px;
+          color: $btn-color;
+          position: relative;
+          bottom: 33px;
+          left: 35px;
+        }
+  
+        .outer-circle-orange {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid $orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .inner-circle-orange {
+                width: 23.33px;
+                height: 23.33px;
+                background-color: $orange; 
+                border-radius: 50%;
+            }
+            p{
+                margin-top: 40px;
+                font-weight: $medium;
+                font-size: $txt-medium-size;
+                color: $orange;
+                display: flex;
+                justify-content: center;
+            }
+        }
+  
+        .line {
+            flex: 1;
+            height: 1px;
+            margin: 0 10px;
+            border: 1px dashed $light-grey-third;
+            width: 97vw;
+        }
+      }
+    } 
+}

@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .footer{
-    
+    padding-bottom: 1rem;
 
     .box-container{
         display: grid;
@@ -61,7 +61,7 @@
         .box-right{
             display: flex;
             gap: 64px;
-            justify-content: space-between;
+            justify-content: flex-end;
             .link{
                 h3{
                     font-weight: $bold;
@@ -116,7 +116,8 @@
         }
 
         .right{
-            justify-content: space-between;
+            justify-content: flex-end;
+            gap: 82px;
         }
     }
 }
