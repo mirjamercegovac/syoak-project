@@ -132,3 +132,15 @@
     }
 
 }
+
+
+@media screen and (max-width: 768px) {
+    .contact {
+        .contact-container {
+            .form-container {
+                max-width: 100%; 
+            }
+        }
+    }
+        
+}

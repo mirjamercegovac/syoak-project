@@ -33,6 +33,17 @@
             transform: translateX(-50%);
           }
     }
+
+    .hamburger {
+        display: none;
+        font-size: 24px; // Prilagodite veličinu prema vašim potrebama
+        cursor: pointer;
+        color: $dark-grey;
+    
+        &:hover {
+         // Prilagodite boju hover efekta
+        }
+      }
     
     .nav{
         left: 280px;
@@ -51,6 +62,10 @@
                 font-size: $txt-small-size;
                 font-weight: $bold;
                 color: $dark-grey;
+
+                &:hover{
+                    color: $btn-color;
+                }
             }
         }
         
@@ -84,5 +99,75 @@
             }
         }
     }
+
+    .nav-btn{
+        padding: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        visibility: hidden;
+        opacity: 0;
+    }
     
 }
+
+
+@media screen and (max-width: 992px){
+    .header{
+        .nav{
+            .right{
+                gap: 16px;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px){
+    .header {
+        .hamburger {
+          display: block;
+        }
+    
+        .vertical-line {
+          display: none;
+        }
+    
+        .nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            left: -110%;
+            opacity: 1;
+            padding: 20px 0;
+            &.active{
+                left: 0px;
+                background: $white;
+                transition: all 0.5s ease;
+                z-index: 1;
+                gap: 20px;
+                .navbar{
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .button{
+                        width: 120px;
+                        margin: auto;
+                        text-align: center;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+

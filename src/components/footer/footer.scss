@@ -121,3 +121,46 @@
         }
     }
 }
+
+@media screen and (max-width: 870px){
+    .footer {
+        .box-container {
+            .line{
+                left: 0;
+            }
+        }
+        .credit{
+            .line{
+                left: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer {
+        .box-container {
+            .box-right {
+                justify-content: flex-start;
+            }
+        }
+    }
+        
+}
+
+@media screen and (max-width: 430px){
+    .footer {
+        .box-container {
+            .box-right {
+                display: grid;
+                gap: 30px;
+            }
+        }
+        .credit{
+            .right{
+                justify-content: space-between;
+            }
+        }
+    }
+}

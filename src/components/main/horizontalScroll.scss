@@ -135,3 +135,46 @@
       }
     } 
 }
+@media screen and (max-width: 992px){
+  .horizontal-scroll{
+
+    .horizontal-scroll-container{
+    
+      .motion-container {
+
+      .page{
+        top: 0;
+        .info{
+        
+          .image{
+
+            img{
+                width: 70%;
+            }
+          }
+
+        }
+
+      }
+
+      }
+    }
+    .progress{
+      .progress-bar {
+        top: 0;
+      }
+    } 
+
+      
+  }
+}
+
+@media screen and (max-width: 870px){
+  .horizontal-scroll{
+    padding: 5rem 0;
+  }
+
+
+  
+}
+

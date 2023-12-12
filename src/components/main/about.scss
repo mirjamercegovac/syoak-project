@@ -82,3 +82,23 @@
 
     }
 }
+
+@media screen and (max-width: 1124px){
+    .box-container{
+
+        .box{
+            &:nth-child(even){
+                flex-flow: wrap;
+            }
+        }
+    }
+      
+}
+
+
+@media screen and (max-width: 992px){
+    .about-container{
+        width: 100%;
+    } 
+}
+ 
