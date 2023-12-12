@@ -71,5 +71,9 @@
 @media only screen and (max-width: 992px){
     .achievements-container{
         width: 100%;
+        display: block;
+        .text{
+            margin-top: 2rem;
+        }
     } 
 }

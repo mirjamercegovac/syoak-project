@@ -16,7 +16,7 @@
                 letter-spacing: 0em;
                 text-align: left;
                 // width: 1031px;
-                max-width: 100%;
+                width: 100%;
             }
             
             .text{
@@ -115,6 +115,9 @@
   
 }
 
+
+
+
 @media screen and (max-width: 992px){
    .horizontal-line{
     .vertical-arrow{
@@ -128,7 +131,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    
+    .home{
+        .home-container{
+            .text{
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 430px){
