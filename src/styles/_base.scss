@@ -31,7 +31,14 @@ body{
         color: $white;
         position: relative;
         top: 2px;
+
     }
+    &:hover{
+        border: 2px solid $btn-color;
+        background: $white;
+        a{
+            color: $dark-grey;
+    }}
 }
 
 

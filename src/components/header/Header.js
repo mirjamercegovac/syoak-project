@@ -33,13 +33,13 @@ const Header = () => {
         </nav>
           
         <div className="right">
-          <a className="button-text">
+          <a href="/login" className="button-text" >
             <img src={icon} alt=""/> Log in 
           </a>
           <a className="button-text">
             <FontAwesomeIcon className="font-icon" icon={faPaperPlane} style={{ color:  '#0052B4', width: '19px', height: '18.43px' }} /> Contact us
           </a>
-          <a className="button">Sign up</a>
+          <a href="/signup" className="button">Sign up</a>
         </div>
       </div>
       

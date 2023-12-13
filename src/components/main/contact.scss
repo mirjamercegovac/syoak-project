@@ -118,6 +118,9 @@
 
                 .button-base{
                     width: 225px;
+                    &:hover{
+                        color: $dark-grey;
+                    }
                 }
             }
 

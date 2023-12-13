@@ -84,6 +84,7 @@
                 gap: 8px;
                 cursor: pointer;
                 align-items: center;
+                color: $dark-grey;
                 img{
                     width: 19px;
                     height: 19px;
@@ -96,6 +97,10 @@
                 cursor: pointer;
                 border-radius: 5px;
                 padding: 8px 24px;
+                color: $dark-grey;
+                &:hover{
+                    color: $btn-color;
+                }
             }
         }
     }
