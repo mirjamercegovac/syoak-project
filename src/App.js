@@ -11,6 +11,7 @@ import Contact from './components/main/Contact';
 import Footer from './components/footer/Footer';
 import LoginForm from './components/login/LoginForm';
 import SignupForm from './components/login/SignupForm';
+import Slider from './components/main/Slider';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
               <Home />
               <Horizontal />
               <About />
-              <HorizontalScroll />
+              <Slider />
               <Achievements />
               <Contact />
               <Footer />
