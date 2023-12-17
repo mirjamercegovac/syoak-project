@@ -1,10 +1,10 @@
-import {React, useRef} from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
-import './horizontalScroll.scss';
-import extraction from '../../images/extraction.svg';
-import transport from '../../images/transport.svg';
-import refining from '../../images/refining.svg';
-import exportI from '../../images/export.svg';
+import React, { useRef, useEffect, useState} from 'react';
+import { motion } from 'framer-motion';
+import './slider.scss';
+import extraction from '../../../images/extraction.svg';
+import transport from '../../../images/transport.svg';
+import refining from '../../../images/refining.svg';
+import exportI from '../../../images/export.svg';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 
@@ -44,35 +44,33 @@ const pages = [
  
 ];
 
-
-
-const HorizontalScroll = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
+const Slider = () => {
+  const [width, setWidth] = useState(0);
+  const slider = useRef();
   
+  useEffect(() => {
+    setWidth((slider.current.scrollWidth - slider.current.offsetWidth));
+  }, []);
   
   return (
-    <section  ref={targetRef} className="horizontal-scroll" id="horizontal-scroll"> 
+    <section ref={slider} while={{cursor: "grabbing"}} className="horizontal-scroll" id="horizontal-scroll"> 
 
-        <div className="horizontal-scroll-container">
+        <motion.div drag="x"
+          dragConstraints={{right: 0, left: -width}} className="horizontal-scroll__container" >
 
-          <motion.div style={{ x }} className="progress">
+          <motion.div className="horizontal-scroll__container__progress">
             {pages.map((page) => {
               return <Circle page={page} key={page.id} />;
             })}
           </motion.div>
 
-          <motion.div style={{ x }} className="motion-container">
+          <motion.div className="horizontal-scroll__container__motion-container">
             {pages.map((page) => {
               return <Page page={page} key={page.id} />;
             })}
           </motion.div>
     
-        </div>
+        </motion.div>
     </section>
     
   );
@@ -80,17 +78,21 @@ const HorizontalScroll = () => {
 
 const Circle = ({page}) => {
   return (
-    <div className="progress-bar">
+    <div className="horizontal-scroll__container__progress__progress-bar">
+
       <div key={page.id} className='circle'>
-        <KeyboardArrowLeftRoundedIcon className='left-icon' />
-        <div className="outer-circle-orange">
-            <div className="inner-circle-orange">
+
+        <KeyboardArrowLeftRoundedIcon className='horizontal-scroll__container__progress__progress-bar__left-icon' />
+        <div className="horizontal-scroll__container__progress__progress-bar__outer-circle-orange">
+            <div className="horizontal-scroll__container__progress__progress-bar__outer-circle-orange__inner-circle-orange">
                 <p>{page.text}</p>
             </div>
         </div>
-        <KeyboardArrowRightRoundedIcon className='right-icon' />
+        <KeyboardArrowRightRoundedIcon className='horizontal-scroll__container__progress__progress-bar__right-icon' />
+      
       </div>
-      <div className="line" /> 
+
+      <div className="horizontal-scroll__container__progress__progress-bar__line" /> 
     </div>
   )
 }
@@ -107,18 +109,18 @@ const Page = ({page}) => {
                     : [word, ' '] 
             ));
   return (
-      <div key={page.id} className="page">
-        <h2 className='main-title'> {mainTitleWithBreak} </h2>
-        <div className='info'>
-          <div className="content">
-            <h3 className="title">
+      <div key={page.id} className="horizontal-scroll__container__motion-container__page">
+        <h2 className='horizontal-scroll__container__motion-container__page--main-title'> {mainTitleWithBreak} </h2>
+        <div className='horizontal-scroll__container__motion-container__page__info'>
+          <div className="horizontal-scroll__container__motion-container__page__info__content">
+            <h3 className="horizontal-scroll__container__motion-container__page__info__content--title">
               {page.title}
             </h3>
-            <p className="paragraph">
+            <p className="horizontal-scroll__container__motion-container__page__info__content--paragraph">
               {page.description}
             </p>
           </div>
-          <div className="image">
+          <div className="horizontal-scroll__container__motion-container__page__info__image">
             <img src={page.image} alt="" />
           </div>
         </div>
@@ -127,4 +129,4 @@ const Page = ({page}) => {
 };
 
 
-export default HorizontalScroll;
+export default Slider;

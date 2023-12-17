@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useState} from 'react';
-import { motion } from 'framer-motion';
-import './slider.scss';
-import extraction from '../../images/extraction.svg';
-import transport from '../../images/transport.svg';
-import refining from '../../images/refining.svg';
-import exportI from '../../images/export.svg';
+import {React, useRef} from 'react';
+import { motion, useTransform, useScroll } from 'framer-motion';
+import './horizontalScroll.scss';
+import extraction from '../../../images/extraction.svg';
+import transport from '../../../images/transport.svg';
+import refining from '../../../images/refining.svg';
+import exportI from '../../../images/export.svg';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 
@@ -44,33 +44,35 @@ const pages = [
  
 ];
 
-const Slider = () => {
-  const [width, setWidth] = useState(0);
-  const slider = useRef();
+
+
+const HorizontalScroll = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
   
-  useEffect(() => {
-    setWidth((slider.current.scrollWidth - slider.current.offsetWidth));
-  }, []);
   
   return (
-    <section ref={slider} while={{cursor: "grabbing"}} className="horizontal-scroll" id="horizontal-scroll"> 
+    <section  ref={targetRef} className="horizontal-scroll" id="horizontal-scroll"> 
 
-        <motion.div drag="x"
-          dragConstraints={{right: 0, left: -width}} className="horizontal-scroll-container" >
+        <div className="horizontal-scroll-container">
 
-          <motion.div className="progress">
+          <motion.div style={{ x }} className="progress">
             {pages.map((page) => {
               return <Circle page={page} key={page.id} />;
             })}
           </motion.div>
 
-          <motion.div className="motion-container">
+          <motion.div style={{ x }} className="motion-container">
             {pages.map((page) => {
               return <Page page={page} key={page.id} />;
             })}
           </motion.div>
     
-        </motion.div>
+        </div>
     </section>
     
   );
@@ -125,4 +127,4 @@ const Page = ({page}) => {
 };
 
 
-export default Slider;
+export default HorizontalScroll;

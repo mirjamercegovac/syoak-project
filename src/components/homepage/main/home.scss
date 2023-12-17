@@ -1,14 +1,13 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 
 .home{
-    
-    
-    .home-container{
+    &__container{
         display: grid;
         gap: 24px;
             
-            .title{
+            &__title{
                 font-size: $title-big-size;
                 font-weight: $extra-bold-black;
                 color: $black;
@@ -19,7 +18,7 @@
                 width: 100%;
             }
             
-            .text{
+            &__text{
                 // max-width: 100%;
                 width: 541px;
                 font-size: $txt-big-size;
@@ -37,24 +36,20 @@
 
 
 
-.horizontal-line{
+.horizontal-line {
 
-    .vertical-arrow{
+    &__vertical-arrow {
         position: absolute;
         left: 99px;
         top: 671px;
     }
-   
-   
 
-   .progress-bar {
-    display: flex;
-    align-items: center;
-    margin: -5rem 1.4rem 0 1.4rem;
-  
+    &__progress-bar {
+        display: flex;
+        align-items: center;
+        margin: -5rem 1.4rem 0 1.4rem;
 
-
-        .circle {
+        &__circle {
             width: 13.33px;
             height: 13.33px;
             background-color: #3498db;
@@ -62,39 +57,22 @@
             margin: 0 10px;
         }
 
-        .outer-circle {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px solid $btn-color;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .inner-circle {
-                width: 13.33px;
-                height: 13.33px;
-                background-color: $btn-color; 
-                border-radius: 50%;
+        &__outer-circle {
+            @include outer-circle;
+
+            &__inner-circle {
+                @include inner-circle;
             }
         }
 
-        .outer-circle-orange {
-            position: relative;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            border: 1px solid $orange;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .inner-circle-orange {
-                width: 23.33px;
-                height: 23.33px;
-                background-color: $orange; 
-                border-radius: 50%;
+        &__outer-circle-orange {
+            @include outer-circle-orange;
+
+            &__inner-circle-orange {
+                @include inner-circle-orange;
             }
-            p{
+
+            &__text {
                 margin-top: 40px;
                 font-weight: $medium;
                 font-size: $txt-medium-size;
@@ -103,24 +81,23 @@
                 justify-content: center;
             }
         }
-  
-        .line {
+
+        &__line {
             flex: 1;
             height: 1px;
             margin: 0 10px;
             border: 1px dashed $light-grey-third;
         }
-  }
-  
-  
+    }
 }
+
 
 
 
 
 @media screen and (max-width: 992px){
    .horizontal-line{
-    .vertical-arrow{
+    &__vertical-arrow{
         display: none;
     }
    }
@@ -132,8 +109,8 @@
 
 @media screen and (max-width: 768px) {
     .home{
-        .home-container{
-            .text{
+        &__container{
+            &__text{
                 width: 100%;
             }
         }

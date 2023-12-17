@@ -1,36 +1,34 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 
 .contact{
 
-    .title{
-        font-size: $title-medium-size;
-        font-weight: $extra-bold-black;
-        line-height: 56px;
-        color: $main-title-color;
+    &__title{
+        @include title;
         margin-bottom: 1rem;
     }
 
-    .contact-container{
+    &__container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         gap: 2rem;
         justify-content: space-between;
-
-        .form-container{
+        
+        &__form-container{
             max-width: 430px;
 
-            .contact-form{
+            &__form{
                 position: relative;
 
-                .contact-box{
+                &__box{
                     position: relative;
                     width: 100%;
                     height: 38px;
                     margin: 2rem 0;
                     border-bottom: 1px solid $light-grey;
 
-                    .contact-label{
+                    &__label{
                         position: absolute;
                         top: -10px;
                         font-size: 10px;
@@ -45,7 +43,7 @@
                         padding-top: 10px;
                     }
 
-                    .contact-input{
+                    &__input{
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -57,13 +55,15 @@
                         &:focus{
                             border-bottom: 1.5px solid $btn-color;
                         }
+                        
                     }
+                    
 
                     textarea{
                         resize: none;
                     }
 
-                    &.verification{
+                    &--verification{
                         border: none;
                         display: flex;
                         gap: 11px;
@@ -77,7 +77,7 @@
                             display: none;
                         }
 
-                        .checkmark{
+                        &__checkmark{
                             width: 24px;
                             height: 24px;
                             border: 1px solid $btn-color;
@@ -87,7 +87,7 @@
                             align-items: center;
                             justify-content: center;
 
-                            .icon{
+                            &__icon{
                                 width: 10px;
                                 color: $btn-color;
                                 transition: .2s;
@@ -96,11 +96,11 @@
                             
                         }
 
-                        #robotCheckbox:checked ~ .checkmark .icon {
+                        #robotCheckbox:checked + &__checkmark &__icon {
                             display: block;
                         }
             
-                        .verifi{
+                        &__verifi{
                             font-size: 15px;
                             font-weight: $regular;
                             line-height: 20px;
@@ -108,11 +108,14 @@
                             color: #303031BF;
                         }
                     }
+
+                    &--textarea{
+                        height: 10rem;
+                    }
+                    
                 }
 
-                .textarea{
-                    height: 10rem;
-                }
+                
 
                 
 
@@ -127,7 +130,7 @@
         }
 
     }
-    .map-container{
+    &__map-container{
         iframe{
             width: 100%;
             height: 100%;
@@ -139,8 +142,8 @@
 
 @media screen and (max-width: 768px) {
     .contact {
-        .contact-container {
-            .form-container {
+        &__container {
+            &__form-container {
                 max-width: 100%; 
             }
         }

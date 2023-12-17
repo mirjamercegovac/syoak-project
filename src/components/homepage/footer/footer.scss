@@ -1,14 +1,14 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
 
 .footer{
     padding-bottom: 1rem;
 
-    .box-container{
+    &__box-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
         gap: 2rem;
 
-        .line{
+        &__line{
             border-top: 1px solid $light-grey-second;
             position: absolute;
             left: 210px;
@@ -16,11 +16,12 @@
             margin-top: -4rem;
         }
 
-        .box-left{
+        &__box-left{
             display: grid;
             gap: 25px;
             width: 317px;
-            .info{
+
+            &__info{
                 display: grid;
                 gap: 16px;
                 img{
@@ -36,7 +37,7 @@
             }
 
 
-            .links{
+            &__links{
                 display: grid;
                 gap: 12px;
                 .icon-font{
@@ -58,11 +59,11 @@
             }
         }
 
-        .box-right{
+        &__box-right{
             display: flex;
             gap: 64px;
             justify-content: flex-end;
-            .link{
+            &__link{
                 h3{
                     font-weight: $bold;
                     font-size: $txt-medium-size;
@@ -70,7 +71,7 @@
                     color: $dark-grey-second;
                     margin-bottom: 12px;
                 }
-                .links{
+                &__links{
                     display: grid;
                     gap: 8px;
                     a{
@@ -95,19 +96,19 @@
 
 
 
-    .credit{
+    &__credit{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
         gap: 2rem;
         margin-top: 5rem;
-        .line{
+        &__line{
             border-top: 1px solid $light-grey-second;
             position: absolute;
             left: 210px;
             width: 100%;
             margin-top: -1rem;
         }
-        .left, .right{
+        &__left, &__right{
             display: flex;
             font-size: $txt-small-size;
             font-weight: $regular;
@@ -115,7 +116,7 @@
             color: $light-grey;
         }
 
-        .right{
+        &__right{
             justify-content: flex-end;
             gap: 82px;
         }
@@ -124,13 +125,8 @@
 
 @media screen and (max-width: 870px){
     .footer {
-        .box-container {
-            .line{
-                left: 0;
-            }
-        }
-        .credit{
-            .line{
+        &__box-container, &__credit {
+            &__line{
                 left: 0;
             }
         }
@@ -140,8 +136,8 @@
 
 @media screen and (max-width: 768px) {
     .footer {
-        .box-container {
-            .box-right {
+        &__box-container {
+            &__box-right {
                 justify-content: flex-start;
             }
         }
@@ -151,14 +147,14 @@
 
 @media screen and (max-width: 430px){
     .footer {
-        .box-container {
-            .box-right {
+        &__box-container {
+            &__box-right {
                 display: grid;
                 gap: 30px;
             }
         }
-        .credit{
-            .right{
+        &__credit{
+            &__right{
                 justify-content: space-between;
             }
         }

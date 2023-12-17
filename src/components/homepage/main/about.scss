@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .about-container{
     display: grid;
@@ -6,24 +7,18 @@
     gap: 40px;
     margin-bottom: 4rem;
 
-    .title{
-        font-size: $title-medium-size;
-        font-weight: $extra-bold-black;
-        line-height: 56px;
-        color: $main-title-color;
+    &__title{
+        @include title;
     }
 
-    .text{
-        font-size: $txt-big-size;
-        font-weight: $regular;
-        line-height: 28px;
-        color: $main-text-color;
+    &__text{
+        @include text;
     }
 }
 
 .box-container{
 
-    .box{
+    &__box{
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
@@ -36,7 +31,7 @@
             flex-flow: row-reverse wrap;
         }
 
-        .image{
+        &__image{
             flex: 0 0 300px;
 
             img{
@@ -44,18 +39,18 @@
             }
         }
 
-        &:nth-child(odd) .image {
+        &:nth-child(odd) &__image {
             display: flex;
             justify-content: flex-end;
         }
         
 
-        .content{
+        &__content{
             flex: 0 0 426px;
             gap: 16px;
             display: grid;
 
-            .title{
+            &__title{
                 font-size: $title-small-size;
                 font-weight: $bold;
                 line-height: 28px;
@@ -63,21 +58,21 @@
                 color: $main-title-color;
             }
 
-            .paragraph{
+            &__paragraph{
                 font-size: $txt-medium-size;
                 font-weight: $regular;
                 line-height: 28px;
                 letter-spacing: 0em;
                 color: $main-text-color;
+
+                &--mid{
+                    font-size: $txt-small-size;
+                    line-height: 20px;
+                    color: $main-text-color;
+                }
             }
 
-            .paragraph-mid{
-                font-size: $txt-small-size;
-                font-weight: $regular;
-                line-height: 20px;
-                letter-spacing: 0em;
-                color: $main-text-color;
-            }
+            
         }
 
     }
@@ -86,7 +81,7 @@
 @media screen and (max-width: 1124px){
     .box-container{
 
-        .box{
+        &__box{
             &:nth-child(even){
                 flex-flow: wrap;
             }
@@ -105,16 +100,16 @@
 
 @media screen and (max-width: 768px){
     .box-container{
-        .box{
+        &__box{
             display: grid;
-            .image{
+            &__image{
                 display: flex;
                 justify-content: center;
                 img{
                     width: 70%;
                 }
             }
-            &:nth-child(odd) .image {
+            &:nth-child(odd) &__image {
                 display: flex;
                 justify-content: center;
             }

@@ -7,22 +7,22 @@ import { FaArrowLeft } from "react-icons/fa";
 const LoginForm = () => {
     return(
         <div className="container-form">
-            <form action="">
-                <h1>Log in</h1>
-                <div className="input-box">
-                    <input type="email" placeholder="Email" required/>
-                    <IoMail className="icon" />
+            <form className="container-form__form" action="">
+                <h1 className="container-form__form__title">Log in</h1>
+                <div className="container-form__form__box">
+                    <input type="email" placeholder="Email" className="container-form__form__box__input" required/>
+                    <IoMail className="container-form__form__box__icon"  />
                 </div>
-                <div className="input-box">
-                    <input type="password" placeholder="Password" required />
-                    <FaLock className="icon" />
+                <div className="container-form__form__box">
+                    <input type="password" placeholder="Password" className="container-form__form__box__input" required />
+                    <FaLock className="container-form__form__box__icon"  />
                 </div>
                 <button type="submit" className="button-base">Log in</button>
-                <div className="register-link">
-                    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                <div className="container-form__form__register-link">
+                    <p>Don't have an account? <a href="/signup" className="container-form__form__register-link--text">Sign up</a></p>
                 </div>
-                <div className="homepage-link">
-                    <a href="/"><FaArrowLeft /> Back to homepage</a>
+                <div className="container-form__form__homepage-link">
+                    <a href="/" className="container-form__form__homepage-link--text"><FaArrowLeft /> Back to homepage</a>
                 </div>
             </form>
         </div>

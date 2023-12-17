@@ -1,0 +1,58 @@
+@import "./variables";
+
+@mixin title{
+    font-size: $title-medium-size;
+    font-weight: $extra-bold-black;
+    line-height: 56px;
+    color: $main-title-color;
+}   
+
+@mixin text{
+    font-size: $txt-big-size;
+    font-weight: $regular;
+    line-height: 28px;
+    color: $main-text-color;
+}
+
+@mixin outer-circle{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $btn-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin inner-circle{
+    width: 13.33px;
+    height: 13.33px;
+    background-color: $btn-color;
+    border-radius: 50%;
+}
+
+@mixin outer-circle-orange{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin inner-circle-orange{
+    width: 23.33px;
+    height: 23.33px;
+    background-color: $orange;
+    border-radius: 50%;
+}
+
+@mixin left-right-icon{
+    height: 32px;
+    width: 32px;
+    color: $btn-color;
+    position: relative;
+}

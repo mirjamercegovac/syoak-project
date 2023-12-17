@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .achievements-container{
     display: grid;
@@ -6,14 +7,11 @@
     gap: 40px;
     margin-bottom: 6rem;
 
-    .title{
-        font-size: $title-medium-size;
-        font-weight: $extra-bold-black;
-        line-height: 56px;
-        color: $main-title-color;
+    &__title{
+        @include title;
     }
 
-    .text{
+    &__text{
         font-size: $txt-medium-size;
         font-weight: $regular;
         line-height: 24px;
@@ -27,14 +25,14 @@
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 24px;
 
-    .box{
+    &__box{
         display: flex;
         gap: 8px;
         border-radius: 5px;
         box-shadow: 0px 0px 4px 0px #0000002E;
         background-color: $white;
         padding: 44px 24px 44px 24px;
-        .icon{
+        &__icon{
             border: 1px solid #F0F0F0;
             border-radius: 50%;
             background-color: #FBFBFB;
@@ -49,16 +47,16 @@
             }
         }
 
-        .content{
+        &__content{
             position: absolute;
-            .number{
+            &__number{
                 font-size: $number-size;
                 line-height: 30.26px;
                 color: $main-title-color;
                 font-weight: $extra-bold-black;
                 padding-bottom: 6px;
             }
-            .text{
+            &__text{
                 font-size: $txt-medium-size;
                 font-weight: $regular;
                 line-height: 28.02px;
@@ -72,7 +70,7 @@
     .achievements-container{
         width: 100%;
         display: block;
-        .text{
+        &__text{
             margin-top: 2rem;
         }
     } 

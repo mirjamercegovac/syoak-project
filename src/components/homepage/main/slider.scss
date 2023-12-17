@@ -1,0 +1,197 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.horizontal-scroll{
+    padding: 5rem 0rem 5rem 13.2rem;
+    
+    &__container{
+      background-color: $white;
+      padding-left: 4.3rem;
+    
+      &__motion-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+        
+        &__page{
+          position: relative;
+          top: 238px;
+          min-width: 100%;
+          cursor: grab;
+
+          &--main-title{
+            @include title;
+            margin-bottom: 2rem;
+          }
+          &__info{
+            flex-wrap: wrap;
+            width: 78%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            &__image{
+
+              img{
+                  width: 100%;
+              }
+            }
+
+            &__content{
+              flex: 0 0 426px;
+              gap: 16px;
+              display: grid;
+
+              &--title{
+                font-size: $title-small-size;
+                font-weight: $bold;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-title-color;
+              }
+
+              &--paragraph{
+                font-size: $txt-medium-size;
+                font-weight: $regular;
+                line-height: 28px;
+                letter-spacing: 0em;
+                color: $main-text-color;
+            }
+          }
+
+        }
+
+      }}
+
+      &__progress{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+  
+  
+        &__progress-bar {
+          top: 177px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+    
+            &__left-icon{
+              @include left-right-icon;
+              top: 33px;
+              right: 25px;
+            }
+            &__right-icon{
+              @include left-right-icon;
+              bottom: 30px;
+              left: 35px;
+            }
+      
+            &__outer-circle-orange {
+                @include outer-circle-orange;
+
+                &__inner-circle-orange {
+                   @include inner-circle-orange;
+                }
+                p{
+                    margin-top: 40px;
+                    font-weight: $medium;
+                    font-size: $txt-medium-size;
+                    color: $orange;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+          
+         
+    
+          &__line {
+              flex: 1;
+              height: 1px;
+              margin: 0 10px;
+              border: 1px dashed $light-grey-third;
+              width: 97vw;
+          }
+        }
+      }
+
+      
+    }
+
+
+    
+     
+}
+@media screen and (max-width: 992px){
+  .horizontal-scroll{
+
+    &__container{
+    
+      &__motion-container {
+
+      &__page{
+        top: 0;
+        &__info{
+          gap: 2rem;
+          &__image{
+
+            img{
+                width: 70%;
+            }
+          }
+
+        }
+
+      }
+
+      }
+
+      &__progress{
+        &__progress-bar {
+          top: 0;
+        }
+      } 
+
+    }
+   
+
+      
+  }
+}
+
+@media screen and (max-width: 870px){
+  .horizontal-scroll{
+    padding: 5rem 0;
+  }
+
+
+  
+}
+
+
+@media screen and (max-width: 550px){
+  .horizontal-scroll{
+   
+    .horizontal-scroll-container{
+    
+      .motion-container { 
+        
+      .page{      
+     
+        .info{  
+
+          .content{
+            display: contents;
+ 
+          }
+
+        }
+
+      }}
+      
+    }
+  }
+  
+}
+

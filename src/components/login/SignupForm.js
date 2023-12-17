@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './loginSignupForm.scss';
 import { IoMail } from "react-icons/io5";
 import { FaLock } from "react-icons/fa";
@@ -6,32 +6,33 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaUser } from "react-icons/fa6";
 
 const SignupForm = () => {
+
     return(
         <div className="container-form">
-            <form action="">
-                <h1>Sign up</h1>
-                <div className="input-box">
-                    <input type="text" placeholder="First name" required/>
-                    <FaUser className="icon" />
+            <form className="container-form__form" action="">
+                <h1 className="container-form__form__title">Sign up</h1>
+                <div className="container-form__form__box">
+                    <input type="text" placeholder="First name" className="container-form__form__box__input" required/>
+                    <FaUser className="container-form__form__box__icon"  />
                 </div>
-                <div className="input-box">
-                    <input type="text" placeholder="Last name" required/>
-                    <FaUser className="icon" />
+                <div className="container-form__form__box">
+                    <input type="text" placeholder="Last name" className="container-form__form__box__input" required/>
+                    <FaUser className="container-form__form__box__icon"  />
                 </div>
-                <div className="input-box">
-                    <input type="email" placeholder="Email" required/>
-                    <IoMail className="icon" />
+                <div className="container-form__form__box">
+                    <input type="email" placeholder="Email" className="container-form__form__box__input" required/>
+                    <IoMail className="container-form__form__box__icon"  />
                 </div>
-                <div className="input-box">
-                    <input type="password" placeholder="Password" required />
-                    <FaLock className="icon" />
+                <div className="container-form__form__box">
+                    <input type="password" placeholder="Password" className="container-form__form__box__input" required />
+                    <FaLock className="container-form__form__box__icon"  />
                 </div>
                 <button type="submit" className="button-base">Sign up</button>
-                <div className="register-link">
-                    <p>Don't have an account? <a href="/login">Log in</a></p>
+                <div className="container-form__form__register-link">
+                    <p>Have an account? <a href="/login" className="container-form__form__register-link--text">Log in</a></p>
                 </div>
-                <div className="homepage-link">
-                    <a href="/"><FaArrowLeft /> Back to homepage</a>
+                <div className="container-form__form__homepage-link">
+                    <a href="/" className="container-form__form__homepage-link--text"><FaArrowLeft /> Back to homepage</a>
                 </div>
             </form>
         </div>

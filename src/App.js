@@ -1,17 +1,17 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import './styles/index.scss';
-import Header from './components/header/Header';
-import Home from './components/main/Home';
-import Horizontal from './components/main/Horizontal';
-import About from './components/main/About';
-import HorizontalScroll from './components/main/HorizontalScroll';
-import Achievements from './components/main/Achievements';
-import Contact from './components/main/Contact';
-import Footer from './components/footer/Footer';
+import Header from './components/homepage/header/Header';
+import Home from './components/homepage/main/Home';
+import Horizontal from './components/homepage/main/Horizontal';
+import About from './components/homepage/main/About';
+import HorizontalScroll from './components/homepage/main/HorizontalScroll';
+import Achievements from './components/homepage/main/Achievements';
+import Contact from './components/homepage/main/Contact';
+import Footer from './components/homepage/footer/Footer';
 import LoginForm from './components/login/LoginForm';
 import SignupForm from './components/login/SignupForm';
-import Slider from './components/main/Slider';
+import Slider from './components/homepage/main/Slider';
 
 
 function App() {
