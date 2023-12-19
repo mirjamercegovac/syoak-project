@@ -17,9 +17,20 @@
         padding: 30px 40px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 
+
         &__title {
             font-size: $title-medium-size;
             text-align: center;
+        }
+
+        &__show-message{
+            display: block;
+            color: #cc1d25;
+            font-weight: $medium;
+            background: #ffceca;
+            text-align: center;
+            padding: 10px;
+            margin-top: 12px;
         }
 
         &__box {
@@ -85,6 +96,14 @@
                 color: $dark-grey;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-form{
+        &__form{
+            margin: 0 20px;
         }
     }
 }

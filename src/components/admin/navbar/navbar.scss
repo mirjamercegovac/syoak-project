@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+
+.navbar{
+    height: 63px;
+    border-bottom: 1px solid $light-grey-fourth;
+    display: flex;
+    align-items: center;
+    
+    &__container{
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+        margin-left: 24px;
+        &__search{
+            display: flex;
+            align-items: center;
+            img{
+                position: absolute;
+                padding-left: 16px;
+            }
+
+            input{
+                border-radius: 6px;
+                border: 1px solid #626263;
+                background: $white;
+                box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
+                display: flex;
+                padding: 4px 12px 4px 40px;
+                width: 311px;
+                height: 40px;
+                font-size: $txt-medium-size;
+            }
+        }
+
+        &__items{
+            display: inline-flex;
+            align-items: center;
+            margin-right: 24px;
+            gap: 24px;
+
+            &__notification{
+                position: relative;
+                &__counter{
+                    width: 15px;
+                    height: 15px;
+                    background-color: #F12727;
+                    border-radius: 50%;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 10px;
+                    position: absolute;
+                    top: -3px;
+                    right: -3px;
+                }
+            }
+        }
+    }
+}

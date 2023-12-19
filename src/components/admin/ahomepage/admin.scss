@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.home{
+    background: $background-color;
+    display: flex;
+    width: 100%;
+
+    &__container{
+        width: 100%;
+    }
+}

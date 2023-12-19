@@ -8,7 +8,11 @@ const LoginForm = () => {
     return(
         <div className="container-form">
             <form className="container-form__form" action="">
+                
                 <h1 className="container-form__form__title">Log in</h1>
+
+                <span className="container-form__form__show-message">Message</span>
+
                 <div className="container-form__form__box">
                     <input type="email" placeholder="Email" className="container-form__form__box__input" required/>
                     <IoMail className="container-form__form__box__icon"  />
