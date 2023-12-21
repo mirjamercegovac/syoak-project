@@ -7,11 +7,11 @@ import Main from '../main/Main';
 const Admin = () => {
 
   return (
-   <div className="home">
+   <div className="ahome">
     <Sidebar />
-    <div className="home__container">
+    <div className="ahome__container">
       <Navbar />
-      <div className="home__container__main">
+      <div className="ahome__container__main">
         <Main />
       </div>
     </div>

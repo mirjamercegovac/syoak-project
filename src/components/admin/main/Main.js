@@ -1,24 +1,19 @@
 import React from "react";
 import './main.scss';
+import Cards from './Cards';
+import Statistics from './Statistics';
+
 
 const Main = () => {
 
   return (
    <div className="main">
-    <div className="main__cards">
-        <div className="main__cards__card">
+    
+    <Cards />
 
-        </div>
-        <div className="main__cards__card">
+    <Statistics />
 
-        </div>
-        <div className="main__cards__card">
-
-        </div>
-        <div className="main__cards__card">
-
-        </div>
-    </div> 
+    
     
    </div>
   );

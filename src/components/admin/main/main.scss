@@ -8,15 +8,218 @@
         gap: 24px;
 
         &__card{
+            height: 226px;
+            width: 200px;
             border-radius: 10px;
-            background: $black;
+            background: $white;
             display: flex;
             padding: 16px;
             flex-direction: column;
-            align-items: flex-start;
             gap: 16px;
-            flex: 1 0 0;
             align-self: stretch;
+
+            &__content{
+                gap: 12px;
+                display: flex;
+                flex-direction: column;
+            
+                &__title{
+                    gap: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    color: #35384D;
+                    h2{
+                        font-size: 20px;
+                        font-weight: $bold;
+                    }
+                    h1{
+                        font-size: 25px;
+                        font-weight: $extra-bold-black;
+                    }
+                    h3{
+                        color: #9DA8B6;
+                        font-size: 8px;
+                        font-weight: $medium;
+                    }
+
+                    &__price{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        &--red{
+                            font-size: $txt-medium-size;
+                            color: #DD4545;
+                            font-weight: $medium;
+                        }
+
+                        &--green{
+                            font-size: $txt-medium-size;
+                            color: #33D067;
+                            font-weight: $medium;
+                        }
+                        &__icon{
+                            width: 10px;
+                        }
+                    }
+                }
+            }
+
+            &--blue{
+                width: 312px;
+                background: $btn-color;
+                padding: 0;
+                border-radius: 6px;
+
+                &__content{
+                    margin: 12px 27px;
+                    gap: 0px;
+                    display: flex;
+                    flex-direction: column;
+
+                    &__title{
+                        gap: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        color: $white;
+                        h2{
+                            font-size: 20px;
+                            font-weight: $bold;
+                        }
+                        h1{
+                            font-size: 35px;
+                            font-weight: $extra-bold-black;
+                        }
+                        h3{
+                            font-size: 10px;
+                            font-weight: $medium;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &__statistic{
+        display: flex;
+        width: 985px;
+        padding: 26px;
+        flex-direction: column;
+        gap: 20px;
+        background: $white;
+        margin-top: 20px;
+        border-radius: 6px;
+
+        h1{
+            color: #35384D;
+            font-size: $title-small-size;
+            font-weight: $extra-bold-black;
+            letter-spacing: 0.32px;
+            height: 40px;
+            border-bottom: 1px solid $light-grey-fourth;
+        }
+
+        &__data{
+            display: flex;
+            gap: 24px;
+            width: 100%;
+            align-items: center;
+
+            &__chart{
+                width: 639px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 52px;
+
+                &__div{
+                    display: flex;
+                    gap: 55px;
+
+                    &__box{
+                        display: flex;
+                        gap: 12px;
+        
+                        &__icon{
+                            background-color: #4596D180;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+        
+                            h3{
+                                color: #4596D1;
+                                font-size: $txt-medium-size;
+                                font-weight: $extra-bold-black;
+                                text-align: center;
+                                position: relative;
+                                top: 8px;
+                            }
+                        }
+
+                        &__info{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+
+                            h3{
+                                color: #35384D;
+                                font-size: 13px;
+                                font-weight: $extra-bold-black;
+                            }
+                            p{
+                                color: $light-grey;
+                                font-size: 13px;
+                                font-weight: $medium;
+                            }
+                        }
+                        &__perc{
+
+                            &--green{
+                                font-size: 13px;
+                                font-weight: $medium;
+                                color: #33D067;
+                            }
+                            &--red{
+                                font-size: 13px;
+                                font-weight: $medium;
+                                color: #DD4545;
+                            }
+                        }
+                     
+        
+                       
+                    }
+                }
+            }
+            
+
+            
+
+            &__image{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 13px;
+                width: 270px;
+
+                &__text{
+                    font-size: 12px;
+                    color: $main-title-color;
+                    text-align: center;
+                    font-weight: $semi-bold;
+                }
+
+                &__btn{
+                    border-radius: 6px;
+                    background: $btn-color;
+                    color: $white;
+                    font-size: 12px;
+                    font-weight: $semi-bold;
+                    padding: 8px 12px;
+                }
+            }
+            
         }
     }
 }
