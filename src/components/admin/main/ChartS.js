@@ -15,52 +15,52 @@ import {
 const data = [
   {
     name: "Q1",
-    uv: 590,
-    pv: 800,
-    amt: 1400,
-    cnt: 750
+    uv: 400, //light blue
+    pv: 800, //red
+    amt: 1000, //yellow
+    cnt: 720
   },
   {
     name: "Q2",
-    uv: 868,
-    pv: 967,
-    amt: 1506,
-    cnt: 590
+    uv: 500,
+    pv: 580,
+    amt: 1800,
+    cnt: 880
   },
   {
     name: "Q3",
-    uv: 1397,
-    pv: 1098,
-    amt: 989,
-    cnt: 350
+    uv: 800,
+    pv: 2500,
+    amt: 1200,
+    cnt: 1400
   },
   {
     name: "2021",
-    uv: 1480,
-    pv: 1200,
-    amt: 1228,
-    cnt: 480
+    uv: 700,
+    pv: 2100,
+    amt: 1100,
+    cnt: 1200
   },
   {
     name: "Q1",
-    uv: 1520,
-    pv: 1108,
+    uv: 700,
+    pv: 2300,
     amt: 1100,
-    cnt: 460
+    cnt: 1400
   },
   {
     name: "Q2",
-    uv: 1400,
-    pv: 680,
-    amt: 1700,
-    cnt: 380
+    uv: 500,
+    pv: 1600,
+    amt: 900,
+    cnt: 1000
   },
   {
     name: "Q3",
-    uv: 1400,
-    pv: 680,
-    amt: 1000,
-    cnt: 580
+    uv: 700,
+    pv: 2300,
+    amt: 1100,
+    cnt: 1300
   }
 ];
 
@@ -79,7 +79,7 @@ const ChartS = () => {
           left: 0
         }}
       >
-        <CartesianGrid stroke="#f5f5f5" />
+        {/* <CartesianGrid stroke="#f5f5f5" /> */}
         <XAxis dataKey="name" axisLine={false} tickLine={false} fontSize={'12px'} />
         {/* <YAxis label={{ value: "Index", angle: -90, position: "insideLeft" }} /> */}
         <Tooltip />

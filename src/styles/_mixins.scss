@@ -56,3 +56,11 @@
     color: $btn-color;
     position: relative;
 }
+
+@mixin char{
+    font-size: $txt-medium-size;
+    font-weight: $extra-bold-black;
+    text-align: center;
+    position: relative;
+    top: 8px;
+}

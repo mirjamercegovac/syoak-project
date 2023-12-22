@@ -1,0 +1,154 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.main{
+
+    &__left{
+        &__statistic{
+            display: flex;
+            width: 985px;
+            padding: 26px;
+            flex-direction: column;
+            gap: 20px;
+            background: $white;
+            margin-top: 20px;
+            border-radius: 6px;
+    
+            h1{
+                color: #35384D;
+                font-size: $title-small-size;
+                font-weight: $extra-bold-black;
+                letter-spacing: 0.32px;
+                height: 40px;
+                border-bottom: 1px solid $light-grey-fourth;
+            }
+    
+            &__data{
+                display: flex;
+                gap: 24px;
+                width: 100%;
+                align-items: center;
+    
+                &__chart{
+                    width: 639px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 52px;
+    
+                    &__div{
+                        display: flex;
+                        gap: 55px;
+    
+                        &__box{
+                            display: flex;
+                            gap: 12px;
+            
+                            &__icon{
+
+                                &--blue{
+                                    background-color: #4596D180;
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+
+                                    &--char{
+                                        color: #4596D1;
+                                        @include char;
+                                    }
+                                }
+                                &--red{
+                                    background-color: #FF515180;
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+
+                                    &--char{
+                                        color: #FF5151;
+                                        @include char;
+                                    }
+                                }
+                                &--yellow{
+                                    background-color: #FFB54780;
+                                    width: 35px;
+                                    height: 35px;
+                                    border-radius: 50%;
+
+                                    &--char{
+                                        color: #FFB547;
+                                        @include char;
+                                    }
+                                }
+                                
+    
+                            }
+    
+                            &__info{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4px;
+    
+                                h3{
+                                    color: #35384D;
+                                    font-size: 13px;
+                                    font-weight: $extra-bold-black;
+                                }
+                                p{
+                                    color: $light-grey;
+                                    font-size: 13px;
+                                    font-weight: $medium;
+                                }
+                            }
+                            &__perc{
+    
+                                &--green{
+                                    font-size: 13px;
+                                    font-weight: $medium;
+                                    color: #33D067;
+                                }
+                                &--red{
+                                    font-size: 13px;
+                                    font-weight: $medium;
+                                    color: #DD4545;
+                                }
+                            }
+                         
+            
+                           
+                        }
+                    }
+                }
+                
+    
+                
+    
+                &__image{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 13px;
+                    width: 270px;
+    
+                    &__text{
+                        font-size: 12px;
+                        color: $main-title-color;
+                        text-align: center;
+                        font-weight: $semi-bold;
+                    }
+    
+                    &__btn{
+                        border-radius: 6px;
+                        background: $btn-color;
+                        color: $white;
+                        font-size: 12px;
+                        font-weight: $semi-bold;
+                        padding: 8px 12px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    
+}

@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+
+.main{
+
+    &__sales{
+        
+        margin-left: 25px;
+        &__title{
+            font-size: 20px;
+            font-weight: $bold;
+            color: $dark-grey-second;
+            margin-left: 20px;
+        }
+
+        &__table{
+            width: 100%;
+            text-align: left;
+            margin-top: 24px;
+            border-collapse: separate; 
+            border-spacing: 0 10px;
+ 
+
+            &__thead{
+
+                th{
+                    font-size: $txt-small-size;
+                    font-weight: $regular;
+                    color: $light-grey;
+                    padding: 11px 40px 11px 0px;
+
+                    &:first-child {
+                        text-align: center; 
+                        padding: 11px 40px 11px 26px;
+                    }
+          
+                    &:last-child {
+                        padding-right: 40px;
+                    }
+                }
+
+            }
+
+            &__tbody{
+                
+                &__tr{
+                    font-size: $txt-small-size;
+                    color: $dark-grey-second;
+                    font-weight: $extra-bold-black;
+                
+
+                    &:hover, &:first-child {
+                        border-radius: 5px;
+                        background: $white;
+                        box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.03);
+                    }
+
+                    &__td{
+                        
+                        &--green{
+                            color: #5BB09C;
+                            font-size: $txt-small-size;
+                            font-weight: $semi-bold;
+                            padding: 18px 40px 18px 0px;
+                           
+                        }
+                    
+                        &:first-child {
+                            padding: 18px 0px 18px 26px;
+                        }
+              
+                        
+                    }
+                
+                }
+            }
+        }
+    }
+
+}
