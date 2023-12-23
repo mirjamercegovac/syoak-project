@@ -1,0 +1,116 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.main{
+
+    &__providers{
+        border-radius: 10px;
+        background: $white;
+        padding: 36px 48px 36px 43px;
+        margin-right: 32px;
+        // width: 511px;
+        width: 55%;
+
+        &__title{
+            font-size: 20px;
+            font-weight: $extra-bold-black;
+            color: $dark-grey-second;
+        }
+
+        &__table{
+            width: 100%;
+            text-align: left;
+            border-collapse: separate; 
+            border-spacing: 0 48px;
+
+            &__tbody{
+                
+                &__tr{
+                    
+                    &__icon{
+
+                        &__box{
+
+                            &--dark-blue{
+                                background-color: #0052B480;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #0052B4;
+                                    @include char-icon;
+                                }
+                            }
+                            &--red{
+                                background-color: #FF515180;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #FF5151;
+                                    @include char-icon;
+                                }
+                            }
+                            &--orange{
+                                background-color: #E86F1B80;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #E86F1B;
+                                    @include char-icon;
+                                }
+                            }
+                            &--yellow{
+                                background-color: #FFB54780;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #FFB547;
+                                    @include char-icon;
+                                }
+                            }
+                            &--light-blue{
+                                background-color: #4596D180;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #4596D1;
+                                    @include char-icon;
+                                }
+                            }
+                        }
+                        
+                       
+              
+                        
+                    }
+
+                    &__name{
+                        color: $dark-grey-second;
+                        font-size: 12px;
+                        font-weight: $semi-bold;
+                        
+                    }
+                    &__location{
+                        color: $light-grey;
+                        font-size: 12px;
+                        font-weight: $medium;
+                        display: flex;
+                        align-items: center;
+                    }
+                
+                }
+            }
+        
+        }
+    }
+}
+

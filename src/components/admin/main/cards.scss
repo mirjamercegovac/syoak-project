@@ -9,10 +9,12 @@
             display: flex;
             align-items: flex-start;
             gap: 24px;
+            width: 100%;
     
             &__card{
                 height: 226px;
-                width: 200px;
+                // width: 200px;
+                width: 20%;
                 border-radius: 10px;
                 background: $white;
                 display: flex;
@@ -69,7 +71,8 @@
                 }
     
                 &--blue{
-                    width: 312px;
+                    // width: 312px;
+                    width: 40%;
                     background: $btn-color;
                     padding: 0;
                     border-radius: 6px;

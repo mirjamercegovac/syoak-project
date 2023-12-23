@@ -1,0 +1,88 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.main{
+
+    &__activity{
+        border-radius: 10px;
+        background: $white;
+        padding: 36px 38px 36px 35px;
+        // width: 421px;
+        width: 45%;
+
+        &__title{
+            font-size: 20px;
+            font-weight: $extra-bold-black;
+            color: $dark-grey-second;
+
+            span{
+                margin-left: 40px;
+                font-size: $txt-medium-size;
+                font-weight: $medium;
+                color: $light-grey;
+
+            }
+        }
+
+        &__table{
+            width: 100%;
+            text-align: left;
+            border-collapse: separate; 
+            border-spacing: 0 38px;
+
+            &__tbody{
+
+                &__tr{
+                    &__time{
+                        font-size:  $txt-small-size;
+                        font-weight: $extra-bold-black;
+                        color: $dark-grey-second;
+                        padding-right: 30px;
+                    }
+
+                    &__icon{
+                        padding-right: 30px;
+                        &__box{
+                            background-color: #25D78280;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            
+
+                            &__arrow{
+                                color: #25D782;
+                                position: relative;
+                                left: 9px;
+                                top: 9px;
+                            }
+                        }
+                    }
+
+                    &__text{
+                        font-size:  $txt-small-size;
+                        font-weight: $extra-bold-black;
+                        color: $dark-grey-second;
+                        padding-right: 40px;
+                        display: grid;
+                        &__name{
+                            font-size: $txt-small-size;
+                            font-weight: $medium;
+                            color: $light-grey;
+
+                        }
+                    }
+
+                    &__price{
+                        font-size: $txt-small-size;
+                        font-weight: $extra-bold-black;
+                        color: $light-grey;
+
+                    }
+                }
+            }
+        }
+
+       
+    }
+}
+

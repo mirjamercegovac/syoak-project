@@ -12,19 +12,32 @@ const Main = () => {
   return (
    <div className="main">
 
-    <div className="main__left">
-        <Cards />
-        <Statistics />
-        <Providers />
-        <Activity />
-    </div>
+      <div className="main__box">
 
-    <div className="main__right">
-        <Sales />
+        <div className="main__box__left">
+           <Cards />
+           <Statistics /> 
+        </div>
+        <div className="main__box__right">
+            <Sales />
+        </div>
     </div>
-    
-    
-   </div>
+    <div className="main__bottom">
+
+      <div className="main__bottom__left">
+          <Providers />
+          <Activity />
+      </div>
+      <div className="main__bottom__right">
+        <Messages />
+      </div>
+          
+          
+    </div>
+        
+  </div>
+
+  
   );
 };
 

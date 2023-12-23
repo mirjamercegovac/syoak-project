@@ -2,14 +2,34 @@
 
 .main{
     margin: 20px;
-    display: flex;
     
-    &__left{
+    &__box{
+        display: flex;
+        &__left{
+            display: grid;
+            width: 70%;
+        }
+
+        &__right{
+            display: flex;
+        }
+
+        
         
     }
 
-    &__right{
+    &__bottom{
 
+        display: flex;
+        margin: 32px 12px;
+        &__left{
+            display: flex;
+            width: 70%;
+        }
+
+        &__right{
+            display: flex;
+        }
     }
     
 }

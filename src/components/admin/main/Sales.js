@@ -1,5 +1,5 @@
 import React from "react";
-import './table.scss';
+import './sales.scss';
 
 const data = [
     { id: 1, provider: 'CHEVRON', stats: '$1.58 (+2.1%)' },

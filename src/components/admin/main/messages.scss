@@ -1,0 +1,88 @@
+@import '../../../styles/variables';
+
+.main{
+
+    &__messages{
+        padding-top: 38px;
+        margin-left: 25px;
+        width: 320px;
+        &__title{
+            font-size: 20px;
+            font-weight: $extra-bold-black;
+            color: $dark-grey-second;
+            margin-left: 20px;
+        }
+
+        &__table{
+            width: 100%;
+            text-align: left;
+            margin-top: 24px;
+            border-collapse: separate; 
+            border-spacing: 0 10px;
+ 
+
+            &__tbody{
+                
+                &__tr{
+                    font-size: $txt-small-size;
+                    color: $dark-grey-second;
+                    font-weight: $extra-bold-black;
+                
+
+                    &:hover, &:first-child {
+                        border-radius: 5px;
+                        background: $white;
+                        box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.03);
+                    }
+
+
+                    &__icon{
+                       position: relative;
+                       padding: 10px 0;
+                        text-align: center;
+                        &--green{
+                            width: 10px;
+                            height: 10px;
+                            background-color: #33D067;;
+                            border-radius: 50%;
+                            color: $white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 10px;
+                            position: absolute;
+                            top: 43px;
+                            right: 27px;
+                            border: 1px solid $white;
+                        }
+                    }
+
+                    &__name{
+                        font-size:  $txt-small-size;
+                        font-weight: $extra-bold-black;
+                        color: $dark-grey-second;
+                        display: grid;
+                        padding: 18px 0;
+                        &__message{
+                            font-size: $txt-small-size;
+                            font-weight: $medium;
+                            color: $light-grey;
+
+                        }
+                    }
+
+                    &__time{
+                        font-size: 11.8px;
+                        font-weight: $extra-bold-black;
+                        color: $light-grey;
+
+                    }           
+
+
+                
+                }
+            }
+        }
+    }
+
+}
