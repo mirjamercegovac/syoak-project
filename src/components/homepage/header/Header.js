@@ -40,7 +40,7 @@ const Header = () => {
             <FontAwesomeIcon className="header__nav__right__font-icon" icon={faPaperPlane} style={{ color:  '#0052B4', width: '19px', height: '18.43px' }} /> Contact us
           </a>
           <a href="/signup" className="header__nav__right__button">Sign up</a>
-          <a href="/admin" className="header__nav__right__button">Admin</a>
+          {/* <a href="/admin" className="header__nav__right__button">Admin</a> */}
           
         </div>
       </div>

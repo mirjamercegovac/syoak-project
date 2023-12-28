@@ -153,3 +153,48 @@
 
     
 }
+
+
+@media screen and (max-width: 992px){
+    .main{
+
+        &__left{
+            &__statistic{
+                
+        
+        
+                &__data{
+        
+                    &__chart{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 52px;
+        
+                        
+                    }
+                    
+        
+                    
+        
+                    &__image{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 13px;
+                        width: 100%;
+        
+                        
+        
+                       
+                    }
+                    
+                }
+            }
+        }
+    
+        
+    }
+}
+ 

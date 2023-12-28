@@ -37,7 +37,28 @@
 }
 
 @media screen and (max-width: 1420px){
+    .main{
+        margin: 20px;
+        
+        &__box{
+            display: grid;
+            &__left{
+                display: grid;
+                width: 100%;
+            }
     
+            &__right{
+                display: block;
+                width: 100%;
+            }
+    
+            
+            
+        }
+    
+      
+        
+    }
       
 }
 

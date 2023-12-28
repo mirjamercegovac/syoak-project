@@ -77,3 +77,35 @@
     }
 
 }
+
+@media screen and (max-width: 1420px){
+    
+    .main{
+
+        &__sales{
+            
+           
+    
+            &__table{
+             
+     
+    
+                &__thead{
+    
+                    th{
+    
+                        &:first-child {
+                            text-align: left; 
+                        }
+              
+                       
+                    }
+    
+                }
+    
+                
+            }
+        }
+    
+    }
+}
