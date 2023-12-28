@@ -9,34 +9,28 @@ import { PiSliders } from "react-icons/pi";
 import { MdDelete } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import { BiSolidCopy } from "react-icons/bi";
-import Create from "./Create";
+import CreateUser from "./CreateUser";
+import avatarGirl from '../../../images/avatar-girl.svg';
 
 
-const dataList = [
-    { id: 1, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.75€', dateCreated: '31/08/2020', color:'dark-blue', icon:'I' },
-    { id: 2, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EURODIESEL', price: '1.52€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 3, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.84€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 4, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.35€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 5, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.30€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 6, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.94€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 7, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.67€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 8, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.79€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 9, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.95€', dateCreated: '31/08/2020', color:'dark-blue', icon:'I' },
-    { id: 10, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EURODIESEL', price: '0.59€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 11, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.84€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 12, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.35€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 13, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.30€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 14, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.94€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 15, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.67€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 16, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.79€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 17, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.75€', dateCreated: '31/08/2020', color:'dark-blue', icon:'I' },
-    { id: 18, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EURODIESEL', price: '0.52€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 19, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.84€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 20, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.35€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 21, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.30€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 22, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '1.94€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 23, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.67€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
-    { id: 24, provider: 'INA d.d.', fuelType: 'Autogas', fullName: 'EUROSUPER95', price: '0.79€', dateCreated: '31/08/2020',color:'dark-blue', icon:'I' },
+const users = [
+    { id: 1, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 2, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 3, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 4, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 5, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 6, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 7, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 8, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 9, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 10, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 11, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green'},
+    { id: 12, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 13, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 14, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 15, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 16, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' },
+    { id: 17, gender: 'female', fullName: 'Jessica Smith', phoneNumber: '+123456789', dateBirth: '20/08/1998', color: 'green' }
 ];
 
 const Table = () => {
@@ -58,8 +52,8 @@ const Table = () => {
     const recordsPerPage = 8;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
-    const records = dataList.slice(firstIndex, lastIndex);
-    const npage = Math.ceil(dataList.length / recordsPerPage);
+    const records = users.slice(firstIndex, lastIndex);
+    const npage = Math.ceil(users.length / recordsPerPage);
     const numbers = [...Array(npage + 1).keys()].slice(1);
 
 
@@ -74,25 +68,25 @@ const Table = () => {
         });
     };
 
-    const [createOpen, setCreateOpen] = useState(false);
+    const [createUserOpen, setCreateUserOpen] = useState(false);
   
   return (
     <div className="container">
       <div className="container__header">
-        <h1 className="container__header__title">Datalist</h1>
+        <h1 className="container__header__title">Users</h1>
         <div className="container__header__info">
           <p className="container__header__info__number">578 total</p>
-          <p className="container__header__info__sort">Sort by: <span>Fuel type</span> <GoChevronDown className="container__header__info__sort__icon"/></p>
+          <p className="container__header__info__sort">Sort by: <span>Full Name</span> <GoChevronDown className="container__header__info__sort__icon"/></p>
         </div>
         <div className="container__header__buttons">
           <button className="container__header__buttons__filter">
             <PiSliders className="container__header__buttons__filter__icon"/>Filter</button>
-          <button className="container__header__buttons__add" onClick={()=> setCreateOpen(true)} >
-            <MdOutlineAddCircle className="container__header__buttons__add__icon"/> Add Fuel</button>
-            {createOpen && (
-                <Create
-                    closeCreate={()=> {
-                        setCreateOpen(false);
+          <button className="container__header__buttons__add" onClick={()=> setCreateUserOpen(true)} >
+            <MdOutlineAddCircle className="container__header__buttons__add__icon"/> Add User</button>
+            {createUserOpen && (
+                <CreateUser
+                    closeCreateUser={()=> {
+                        setCreateUserOpen(false);
                     }} 
             />)}
         </div>
@@ -103,11 +97,11 @@ const Table = () => {
             <thead className="container__div__table__thead">
                 <tr className="container__div__table__thead__tr">
                     <th style={{width: '30px'}}></th>
-                    <th>Provider</th>
-                    <th>Fuel Type</th>
+                    <th>Icon</th>
+                    <th>Gender</th>
                     <th>Full Name</th>
-                    <th>Price</th>
-                    <th>Date Created</th>
+                    <th>Phone Number</th>
+                    <th>Date Birth</th>
                     <th style={{textAlign: 'end'}}>
                     <ul className="container__div__table__thead__tr__pagination">
                         <li className="container__div__table__thead__tr__pagination__page-item">
@@ -141,22 +135,20 @@ const Table = () => {
                         />
                     </td>
                     <td className="container__div__table__tbody__tr__icon">
-                        <div className={`container__div__table__tbody__tr__icon__box--${data.color}`}>
-                            <h3 className={`container__div__table__tbody__tr__icon__box--${data.color}--char`}>{data.icon}</h3>
-                        </div>
-                        {data.provider}
+                        <img src={avatarGirl} alt="" />
+                        <div className={`container__div__table__tbody__tr__icon--${data.color}`}></div>
                     </td>
-                    <td className="container__div__table__tbody__tr__fuel">{data.fuelType}</td>
+                    <td className="container__div__table__tbody__tr__fuel">{data.gender}</td>
                     <td className="container__div__table__tbody__tr__name">{data.fullName}</td>
-                    <td className="container__div__table__tbody__tr__price">{data.price}</td>
-                    <td className="container__div__table__tbody__tr__date">{data.dateCreated}</td>
+                    <td className="container__div__table__tbody__tr__price">{data.phoneNumber}</td>
+                    <td className="container__div__table__tbody__tr__date">{data.dateBirth}</td>
                     <td className="container__div__table__tbody__tr__more">
                         <MoreHorizRoundedIcon style={{cursor: 'pointer'}} onClick={() => toggleRowOpen(data.id)}/>
                         <div className={`container__div__table__tbody__tr__more__menu ${rowOpen[data.id] ? 'active' : 'inactive'}`}>
                             <ul className="container__div__table__tbody__tr__more__menu__ul">
-                                <DropdownMore icon={<FaRegEdit />} text={"Edit Data"}/>
-                                <DropdownMore icon={<MdDelete />} text={"Remove Data"}/>
-                                <DropdownMore icon={<BiSolidCopy />} text={"Duplicate Data"}/>
+                                <DropdownMore icon={<FaRegEdit />} text={"Edit User"}/>
+                                <DropdownMore icon={<MdDelete />} text={"Remove User"}/>
+                                <DropdownMore icon={<BiSolidCopy />} text={"Duplicate User"}/>
                             </ul>
                         </div>
                     </td>

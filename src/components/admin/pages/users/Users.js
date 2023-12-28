@@ -2,9 +2,9 @@ import React from "react";
 import '../../pages/pages.scss';
 import Sidebar from '../../sidebar/Sidebar';
 import Navbar from '../../navbar/Navbar';
-import Main from '../../main/Main';
+import TableUsers from '../../table/TableUsers';
 
-const Admin = () => {
+const Users = () => {
 
   return (
    <div className="page">
@@ -12,7 +12,7 @@ const Admin = () => {
     <div className="page__container">
       <Navbar />
       <div className="page__container__main">
-        <Main />
+        <TableUsers />
       </div>
     </div>
     
@@ -20,4 +20,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Users;

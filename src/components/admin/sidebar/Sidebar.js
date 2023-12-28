@@ -71,7 +71,7 @@ const Sidebar = () => {
     { path: '/admin', icon: <BsSpeedometer2 /> },
     { path: '/datalist', icon: <AiOutlineFileSearch /> },
     { path: '/graph', icon: <LuLineChart /> },
-    { path: '/user', icon: <FaUser /> },
+    { path: '/users', icon: <FaUser /> },
     // Add more items as needed
   ];
 

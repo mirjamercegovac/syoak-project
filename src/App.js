@@ -14,6 +14,7 @@ import SignupForm from './components/login/SignupForm';
 import Slider from './components/homepage/main/Slider';
 import Admin from './components/admin/pages/ahomepage/Admin';
 import DataList from './components/admin/pages/datalist/DataList';
+import Users from './components/admin/pages/users/Users';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/datalist" element={<DataList />} />
+        <Route path="/users" element={<Users />} />
         <Route
           path="/*"
           element={
