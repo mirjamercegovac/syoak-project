@@ -72,3 +72,9 @@
     position: relative;
     top: 5px;
 }
+
+@mixin table-text{
+    color: $light-grey;
+    font-size: 13px;
+    font-weight: $medium;
+}

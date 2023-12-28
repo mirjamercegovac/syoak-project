@@ -1,8 +1,8 @@
 import React from "react";
 import './admin.scss';
-import Sidebar from '../sidebar/Sidebar';
-import Navbar from '../navbar/Navbar';
-import Main from '../main/Main';
+import Sidebar from '../../sidebar/Sidebar';
+import Navbar from '../../navbar/Navbar';
+import Main from '../../main/Main';
 
 const Admin = () => {
 

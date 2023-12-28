@@ -1,0 +1,232 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.container{
+    margin: 62px 122px 62px 53px;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title{
+            color: $dark-grey-second;
+            font-size: 25px;
+            font-weight: $extra-bold-black;
+            letter-spacing: 0.32px;
+        }
+
+        &__info{
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            left: 231px;
+            top: 141px;
+            
+            &__number{
+                color: $light-grey;
+                font-size: 12.8px;
+                font-weight: $medium;
+                letter-spacing: 0.32px;
+            }
+
+            &__sort{
+                color: $black;
+                font-size: 12px;
+                font-weight: $medium;
+                span{
+                    color: $light-grey;
+                    font-size: 12px;
+                    font-weight: $medium;
+                }
+
+                &__icon{
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &__buttons{
+            display: flex;
+            gap: 12px;
+            
+
+            &__filter{
+                cursor: pointer;
+                color: $btn-color;
+                font-size: 12.8px;
+                font-weight: $medium;
+                display: flex;
+                padding: 12px 20px;
+                align-items: center;
+                gap: 5px;
+                border: 1.5px solid $btn-color;
+                background: none;
+                &__icon{
+                    height: 13.8px;
+                    width: 13.8px;
+                    rotate: 90deg;
+                }
+            }
+
+            &__add{
+                cursor: pointer;
+                color: $white;
+                text-align: center;
+                font-size: 12.8px;
+                font-weight: $medium;
+                display: flex;
+                padding: 12px 20px;
+                align-items: center;
+                gap: 1px;
+                background: $btn-color;
+                border: none;
+                &__icon{
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+
+    &__div{
+
+        &__table{
+            width: 100%;
+            border-collapse: separate; 
+            border-spacing: 0 15px;
+            margin-top: 78px;
+            text-align: left;
+
+            &__thead{
+
+                &__tr{
+                    
+                    th{
+                        font-size: $txt-medium-size;
+                        font-weight: $extra-bold-black;
+                        color: $dark-grey-second;
+                        width: 200px;
+
+                    }
+
+                    &__pagination{
+                        display: inline-flex;
+                        align-items: center;
+                        background: $white;
+                        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.03);
+                        border-radius: 2px;
+                        justify-content: space-around;
+                        height: 34px;
+                        position: relative;
+                        top: -10px;
+
+                        &__page-item{
+                            border-right: 0.5px solid $light-grey-fourth;
+                            height: 34px;
+                            width: 34px;
+                            text-align: center;
+                            display: flex;
+                            position: relative;
+                            &.active{
+                               background: $light-grey-fourth;
+                            }
+
+                            &__page-link{
+                                display: flex;
+                                align-items: center;
+                                padding: 5px;
+                                &.num{
+                                    color: #868686;
+                                    font-size: 12.8px;
+                                    font-weight: $regular;
+                                    text-align: center;
+                                    width: 34px;
+                                    display: flex;
+                                    justify-content: center;
+                                    
+                                }
+
+                                &__icon{
+                                    color: #1A051D;
+                                }
+                            }
+                            &.next{
+                                border-right: none;
+                            }
+                            
+                        }
+                    }
+
+                }
+            }
+
+            &__tbody{
+
+                &__tr{
+                    border-radius: 5px;
+                    background: $white;
+                    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.03);
+                    height: 60px;
+                    &__checkbox{
+                        text-align: center;
+                        padding: 0 23px;
+                        input{
+                            height: 15px;
+                            width: 15px;
+                        }
+                    }
+                    &__icon{
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        position: relative;
+                        top: 12px;
+                        color: $dark-grey-second;
+                        font-size: 13px;
+                        font-weight: $medium;
+
+                        &__box{
+                            &--dark-blue{
+                                background-color: #0052B480;
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 50%;
+
+                                &--char{
+                                    color: #0052B4;
+                                    @include char;
+                                }
+                            }
+
+                        }
+                    }
+
+                    &__fuel{
+                        @include table-text;
+                    }
+
+                    &__name{
+                        @include table-text;
+                    }
+                    &__price{
+                        @include table-text;
+                        color: $dark-grey-second;
+                        font-weight: $extra-bold-black;
+                    }
+                    &__date{
+                        @include table-text;
+                    }
+
+                    &__more{
+                        text-align: end;
+                        padding: 0 23px;
+                    }
+                }
+            }
+        }
+
+    }
+}
