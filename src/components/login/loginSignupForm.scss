@@ -24,7 +24,8 @@
         }
 
         &__show-message{
-            display: block;
+            // display: block;
+            display: none;
             color: #cc1d25;
             font-weight: $medium;
             background: #ffceca;

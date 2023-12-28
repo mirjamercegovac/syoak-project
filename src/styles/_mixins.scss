@@ -78,3 +78,16 @@
     font-size: 13px;
     font-weight: $medium;
 }
+
+@mixin text-add{
+    font-family: $font-family-roboto;
+    color: rgba(48, 48, 49, 0.75);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@mixin button-text{
+    text-align: center;
+    font-size: 12.8px;
+    font-weight: $medium;
+}

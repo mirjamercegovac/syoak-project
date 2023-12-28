@@ -223,6 +223,54 @@
                     &__more{
                         text-align: end;
                         padding: 0 23px;
+
+                        &__menu{
+                            border-radius: 6px;
+                            background: $white;
+                            box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
+                            width: 240px;
+                            height: 125px;
+                            align-items: center;
+                            display: grid;
+                            position: absolute;
+                            right: 130px;
+
+                            &__ul{
+                                color: #626263;
+                                font-size: 14px;
+                                font-weight: $regular;
+                                align-items: center;
+                                text-align: left;
+                                margin-left: 21px;
+                                display: grid;
+                                gap: 22px;
+
+                                &__dropdown-item{
+                                    align-items: center;
+                                    display: flex;
+                                    gap: 13px;
+
+                                    span{
+                                        height: 14px;
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                            
+
+                            &.active{
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                                transition: .4s ease;
+                            }
+                            &.inactive{
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translateY(-20px);
+                                transition: .4s ease;
+                            }
+                        }
                     }
                 }
             }

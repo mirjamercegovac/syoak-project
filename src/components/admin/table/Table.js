@@ -6,6 +6,10 @@ import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 import { MdOutlineAddCircle } from "react-icons/md";
 import { PiSliders } from "react-icons/pi";
+import { MdDelete } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
+import { BiSolidCopy } from "react-icons/bi";
+import Create from "./Create";
 
 
 const dataList = [
@@ -48,6 +52,8 @@ const Table = () => {
         });
     };
 
+    
+
     const [currentPage, setCurrentPage] = useState(1);
     const recordsPerPage = 8;
     const lastIndex = currentPage * recordsPerPage;
@@ -56,6 +62,19 @@ const Table = () => {
     const npage = Math.ceil(dataList.length / recordsPerPage);
     const numbers = [...Array(npage + 1).keys()].slice(1);
 
+
+    const [rowOpen, setRowOpen] = useState({});
+
+    const toggleRowOpen = (id) => {
+        setRowOpen((prevRowOpen) => {
+        return {
+            ...prevRowOpen,
+            [id]: !prevRowOpen[id],
+        };
+        });
+    };
+
+    const [createOpen, setCreateOpen] = useState(false);
   
   return (
     <div className="container">
@@ -68,8 +87,14 @@ const Table = () => {
         <div className="container__header__buttons">
           <button className="container__header__buttons__filter">
             <PiSliders className="container__header__buttons__filter__icon"/>Filter</button>
-          <button className="container__header__buttons__add" >
+          <button className="container__header__buttons__add" onClick={()=> setCreateOpen(true)} >
             <MdOutlineAddCircle className="container__header__buttons__add__icon"/> Add Fuel</button>
+            {createOpen && (
+                <Create
+                    closeCreate={()=> {
+                        setCreateOpen(false);
+                    }} 
+            />)}
         </div>
       </div>
 
@@ -126,7 +151,14 @@ const Table = () => {
                     <td className="container__div__table__tbody__tr__price">{data.price}</td>
                     <td className="container__div__table__tbody__tr__date">{data.dateCreated}</td>
                     <td className="container__div__table__tbody__tr__more">
-                        <MoreHorizRoundedIcon />
+                        <MoreHorizRoundedIcon style={{cursor: 'pointer'}} onClick={() => toggleRowOpen(data.id)}/>
+                        <div className={`container__div__table__tbody__tr__more__menu ${rowOpen[data.id] ? 'active' : 'inactive'}`}>
+                            <ul className="container__div__table__tbody__tr__more__menu__ul">
+                                <DropdownMore icon={<FaRegEdit />} text={"Edit Data"}/>
+                                <DropdownMore icon={<MdDelete />} text={"Remove Data"}/>
+                                <DropdownMore icon={<BiSolidCopy />} text={"Duplicate Data"}/>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
             ))}
@@ -153,7 +185,14 @@ const Table = () => {
     }
 };
 
-
+function DropdownMore(props){
+    return(
+        <li className='container__div__table__tbody__tr__more__menu__ul__dropdown-item'>
+            <span>{props.icon}</span>
+            <a>{props.text}</a>
+        </li>
+    );
+}
 
 
 export default Table;

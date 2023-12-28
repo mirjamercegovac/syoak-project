@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.create{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(196, 196, 196, 0.30);
+   
+
+    &__container{
+        width: 467px;
+        height: 839px;
+        padding: 58px 39px;
+        background: $white;
+        right: 0;
+        top: 67px;
+        position: absolute;
+
+        &__form{
+
+            &__title{
+                margin-bottom: 66px;
+                color: $dark-grey-second;
+                font-size: 20px;
+                font-weight: $extra-bold;
+                letter-spacing: 0.32px;
+            }
+
+            &__box{
+                margin-bottom: 45px;
+                
+                &__input{
+                    @include text-add;
+                    width: 100%;
+                    padding: 14px 16px;
+                    outline: none;
+                    border: none;
+                    background: $white;
+                    border-radius: 6px;
+                    box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
+                }
+
+                &__number{
+                    @include text-add;
+                    width: 73px;
+                    padding: 16px 0;
+                    text-align: center;
+                    border-radius: 3px;
+                    border: 1px solid #ECEBED;
+                    background: $white;
+                    box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
+                }
+
+                &__label{
+                    @include text-add;
+                    margin-right: 38px;
+                }
+            }
+
+            &__buttons{
+                margin-top: 93px;
+                display: flex;
+                gap: 22px;
+
+                &__save{
+                    @include button-text;
+                    height: 36px;
+                    width: 120px;
+                    cursor: pointer;
+                    background: $btn-color;
+                    color: $white;
+                    border: none;
+                }
+
+                &__preview{
+                    @include button-text;
+                    height: 36px;
+                    width: 120px;
+                    cursor: pointer;
+                    background: $white;
+                    color: $btn-color;
+                    border: 1.5px solid $btn-color;
+                }
+
+                &__cancel{
+                    @include button-text;
+                    cursor: pointer;
+                    height: 36px;
+                    width: 98px;
+                    color: #DD4545;;
+                    border: none;
+                    background: none;
+                }
+            }
+            
+        }
+    }
+}
